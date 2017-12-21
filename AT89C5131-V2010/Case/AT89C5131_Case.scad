@@ -1,9 +1,16 @@
 wallthickness = 2.5;
 $fn = 50;
 
+
+translate([10, 10, 0]) cylinder(3, 3, 3);
+translate([wallthickness*2 + 102 - 10, 10, 0]) cylinder(3, 3, 3);
+translate([10, wallthickness*2 + 85 - 10, 0]) cylinder(3, 3, 3);
+translate([wallthickness*2 + 102 - 10, wallthickness*2 + 85 - 10, 0]) cylinder(3, 3, 3);
+
+translate([0, 0, 3])
 difference(){
     shell();
-    translate([0, 0, 17 + 2]) cube([wallthickness*2 + 102, wallthickness*2 + 85, 17 + 4]);
+    translate([0, 0, 17 + 2]) cube([wallthickness * 2 + 102, wallthickness*2 + 85, 17 + 4]);
 }
 
 module shell(){
