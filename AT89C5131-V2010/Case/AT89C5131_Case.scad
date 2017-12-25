@@ -1,11 +1,13 @@
 wallthickness = 2.5;
 $fn = 50;
 
-
+//feets
+/*
 translate([10, 10, 0]) cylinder(3, 3, 3);
 translate([wallthickness*2 + 102 - 10, 10, 0]) cylinder(3, 3, 3);
 translate([10, wallthickness*2 + 85 - 10, 0]) cylinder(3, 3, 3);
 translate([wallthickness*2 + 102 - 10, wallthickness*2 + 85 - 10, 0]) cylinder(3, 3, 3);
+*/
 
 translate([0, 0, 3])
 difference(){
