@@ -3,11 +3,14 @@ difference(){
     union(){
         difference(){
             translate([0, -5, 0]) cube([62, 8, 52]);
-            translate([0, 0, 52]){
-                translate([(8.2 + 2.6/2), 3, -(3.9 + 2.6/2)]) rotate([90, 0, 0]) cylinder(20, 2.6/2, 2.6/2);
-                translate([62 - (8.2 + 2.6/2), 3, -(41.4 + 2.6/2)]) rotate([90, 0, 0]) cylinder(20, 2.6/2, 2.6/2);
-                translate([(8.2 + 2.6/2), -1, -(3.9 + 2.6/2)]) rotate([90, 0, 0]) cylinder(4, 5.7/2, 5.7/2);
-                translate([62 - (8.2 + 2.6/2), -1, -(41.4 + 2.6/2)]) rotate([90, 0, 0]) cylinder(4, 5.7/2, 5.7/2);
+            
+            translate([(8.2 + 1.5), 3, 52 -(3.9 + 1.5)]){
+                rotate([90, 0, 0]) cylinder(20, 1.5, 1.5);
+                rotate([90, 0, 0]) cylinder(4, 5.7/2, 5.7/2);
+            }
+            translate([62 - (8.2 + 1.5), 3, 52 -(41.4 + 1.5)]){
+                rotate([90, 0, 0]) cylinder(20, 1.5, 1.5);
+                rotate([90, 0, 0]) cylinder(4, 5.7/2, 5.7/2);
             }
         }
         translate([0, 3, 52]){
@@ -17,18 +20,18 @@ difference(){
             translate([62 - (18.7 + 6.65/2), 3, -(38 + 2.6/2)]) rotate([90, 0, 0]) cylinder(6, 6.55/2, 6.55/2);
         }
         
-        translate([62/2 - 27/2, -5, 0]) cube([27, 6, 145]);
-        translate([62/2, 3, 17.5 + 54.6 + 5]) rotate([90, 0, 0]) cylinder(6, 5, 5);
-        translate([62/2, 3, 17.5 + 54.6*2 + 7.5]) rotate([90, 0, 0]) cylinder(6, 5, 5);
+        translate([62/2 - 27/2, -5, 0]) cube([27, 6, 149]);
+        translate([62/2, 3, 20 + 60]) rotate([90, 0, 0]) cylinder(6, 6.5, 6.5);
+        translate([62/2, 3, 20 + 60*2]) rotate([90, 0, 0]) cylinder(6, 6.5, 6.5);
             
     }
-    translate([62/2, 6, 17.5 + 2.5]) rotate([90, 0, 0]) cylinder(20, 2.5, 2.5);
-    translate([62/2, 0, 17.5 + 54.6 + 5]) rotate([90, 0, 0]) cylinder(20, 2.5, 2.5);
-    translate([62/2, 0, 17.5 + 54.6*2 + 7.5]) rotate([90, 0, 0]) cylinder(20, 2.5, 2.5);
+    translate([62/2, 6, 20]) rotate([90, 0, 0]) cylinder(20, 2.5, 2.5);
+    translate([62/2, 0, 20 + 60]) rotate([90, 0, 0]) cylinder(20, 2.5, 2.5);
+    translate([62/2, 0, 20 + 60*2]) rotate([90, 0, 0]) cylinder(20, 2.5, 2.5);
     
-    translate([62/2, 3 + 1, 17.5 + 2.5]) rotate([90, 0, 0]) scale([1.05, 1.05, 1]) InvertSechskant(8, 6);
-    translate([62/2, 3 + 1, 17.5 + 54.6 + 5]) rotate([90, 0, 0]) scale([1.05, 1.05, 1]) InvertSechskant(8, 5);
-    translate([62/2, 3 + 1, 17.5 + 54.6*2 + 7.5]) rotate([90, 0, 0]) scale([1.05, 1.05, 1]) InvertSechskant(8, 5);
+    translate([62/2, 3 + 1, 20]) rotate([90, 0, 0]) scale([1.05, 1.05, 1]) InvertSechskant(8, 6);
+    translate([62/2, 3 + 1, 20 + 60]) rotate([90, 0, 0]) scale([1.05, 1.05, 1]) InvertSechskant(8, 5);
+    translate([62/2, 3 + 1, 20 + 60*2]) rotate([90, 0, 0]) scale([1.05, 1.05, 1]) InvertSechskant(8, 5);
 }
 
 module InvertSechskant(size, height){
