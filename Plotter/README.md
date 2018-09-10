@@ -7,12 +7,12 @@
 
 * #### Comment out the temp lines:
 
- 	;T0
-	;M109 S0
+      ;T0
+      ;M109 S0
 
 * #### Add the negative offset after the Homing:
 
-	G92 Z-5 ;5mm offset
+      G92 Z-5 ;5mm offset
 
 * #### Split the first move into two lines:
 
